@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+React on Rails app that allows the user to upload and compare CSV files with a predefined structure (Headers: Account Email, YouTube Channel, Subscriber Count).
 
-Things you may want to cover:
+The Account Email addresses are returned for all rows containing a discrepancy.
 
-* Ruby version
+* Ruby version - 2.6.2
 
-* System dependencies
+* Rails - 6.1.0
 
-* Configuration
 
-* Database creation
+# To Run App
+Clone -> Yarn -> Bundle -> Rails S
+```
+$ git clone git@github.com:MamboMaya/csv-compare.git
+$ yarn install
+$ bundle install
+$ rails s
+```
 
-* Database initialization
+# To Run Tests
+```
+$ rspec
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# TODO
+1. Refactor api with a Value Object design pattern in mind.
