@@ -42,7 +42,7 @@ export default function Form() {
   return(
     <div>
       <form className="form-wrapper" onSubmit={submitForm}>
-        <div className="left-50">
+        <div className="column-50">
           {inputs.length && inputs.map((input) =>
             <FileUpload
               key={input}
@@ -63,11 +63,11 @@ export default function Form() {
             Add Another File
           </Button>
         </div>
-        <div className="left-50">
+        <div className="column-50">
           <SelectWrapper handleConcern={handleConcern} />
           <Button
             variant="contained"
-            color="primary"
+            color="secondary"
             type="submit"
             disabled={files.length < 2 || differences?.length > 0}
           >

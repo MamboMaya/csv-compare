@@ -15,11 +15,9 @@ class FilesController < ApplicationController
       'Subscriber Count' => :subscriber_count
     }
 
-    concerns = []
+    concerns = [:channel_ownership, :subscriber_count]
     if params[:concern]
-      concerns = concerns << params[:concern].to_sym
-    else
-      concerns = [:channel_ownership, :subscriber_count]
+      concerns = concerns.select { |item| item === params[:concern].to_sym }
     end
 
     base_file = params[:files].shift
