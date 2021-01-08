@@ -11,6 +11,7 @@ export default function FileUpload({ name, remove, addFile }) {
       <Input
         type="file"
         name={name}
+        required
         accept=".txt, .csv"
         disableUnderline
         onChange={e => {
